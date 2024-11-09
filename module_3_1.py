@@ -15,18 +15,12 @@ def string_info(n):
 
     return string_inf
 
-def is_contains(n, list_to_search):
+def is_contains(string, list_to_search):
     count_calls()
-    for n in [n.lower() in list_to_search]:
-        if list_to_search == n:
-            print('TRUE')
-        else:
-            print('FALSE')
-
-
+    return string.lower() in [s.lower() for s in list_to_search]
 
 print(string_info('Capybara'))
 print(string_info('Armageddon'))
-print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+print(is_contains('ban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
 print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
 print(calls)
